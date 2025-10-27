@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(96, 69, 49);
+}
+.display_block{
+    display: block !important; 
+
+}
+.head-li{ padding:0 20px;
+      font-size: 18px;
+    cursor: pointer;}
+.head-li-1{
+    cursor: pointer;
+     padding:0 20px;
+    /* text-align: center */
+    font-size: 18px;
+
+
+}
+.menu_div{
+    background-color: rgb(175, 133, 104);
+    
+    line-height: 30px;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    display: none;
+    width: 120px;
+}
