@@ -1,0 +1,87 @@
+
+body{
+      font-family: Arial;
+      background: rgb(101, 66, 42);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    button {
+      padding: 10px 20px;
+      background: rgb(199, 174, 157);
+      border: none;
+      border-radius: 8px;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      
+    }
+
+    button:hover {
+      background: rgb(133, 117, 106);
+      transition: 0.8s;
+    }
+
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    
+    .modal {
+      position: fixed;
+      top: 55%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      width: 300px;
+      max-width: 80%;
+      opacity: 0;
+      animation: none;
+    }
+
+ 
+    .modal.active {
+      animation: slideUp 0.4s ease forwards;
+    }
+
+    @keyframes slideUp {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -40%);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .close-btn {
+      display: block;
+      margin-left: auto;
+      background: rgb(187, 138, 104);
+      border: none;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .close-btn:hover {
+      background: rgb(71, 35, 12);
+    }
+  

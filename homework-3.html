@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal homework</title>
+  <link rel="stylesheet" href="homework-3.css">
+</head>
+<body>
+  <button id="openModal">Open Modal</button>
+
+  <div class="modal-overlay" id="overlay">
+    <div class="modal" id="modal">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <h2>Hello!</h2>
+      <p>This a test modal that i did as my homewrok!</p>
+    </div>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('openModal');
+    const closeBtn = document.getElementById('closeModal');
+    const overlay = document.getElementById('overlay');
+    const modal = document.getElementById('modal');
+
+    openBtn.addEventListener('click', () => {
+      overlay.classList.add('active');
+      modal.classList.add('active');
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeModal();
+    });
+
+    function closeModal() {
+      modal.classList.remove('active');
+      overlay.classList.remove('active');
+    }
+  </script>
+</body>
+</html>
